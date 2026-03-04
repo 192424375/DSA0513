@@ -1,0 +1,15 @@
+import pandas as pd
+
+# Sample Data
+data = {
+    "Job ID": [101, 102, 103, 104],
+    "Job Title": ["Manager", "Analyst", "Clerk", "Supervisor"],
+    "Salary": [60000, 45000, 25000, 50000]
+}
+
+df = pd.DataFrame(data)
+
+# Sorting in descending order based on Job Title
+sorted_df = df.sort_values(by="Job Title", ascending=False)
+
+print(sorted_df)
