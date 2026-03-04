@@ -1,0 +1,28 @@
+# Import required libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import yfinance as yf
+
+# Define the ticker symbol for Alphabet Inc.
+ticker = "GOOGL"
+
+# Define the date range
+start_date = "2022-01-01"
+end_date = "2022-12-31"
+
+# Download historical stock data
+stock_data = yf.download(ticker, start=start_date, end=end_date)
+
+# Create a line plot of the Closing prices
+plt.figure(figsize=(10, 5))
+plt.plot(stock_data.index, stock_data['Close'], label='Closing Price')
+
+# Add title and labels
+plt.title("Alphabet Inc. Historical Stock Prices")
+plt.xlabel("Date")
+plt.ylabel("Price (USD)")
+plt.legend()
+plt.grid(True)
+
+# Display the plot
+plt.show()
