@@ -1,0 +1,10 @@
+import pandas as pd
+
+# Load dataset
+df = pd.read_csv('world_alcohol.csv')
+
+# Display shape
+print("Shape:", df.shape)
+
+# Display column names
+print("Columns:", df.columns.tolist())
