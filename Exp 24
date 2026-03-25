@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('alphabet_stock_data.csv')
+
+df['Date'] = pd.to_datetime(df['Date'])
+df.set_index('Date', inplace=True)
+
+# Filter October 2016
+oct_data = df.loc['2016-10-01':'2016-10-31']
+
+# Plot closing price
+oct_data['Close'].plot(figsize=(10, 5), color='blue')
+
+plt.title('Alphabet Stock Price - October 2016')
+plt.xlabel('Date')
+plt.ylabel('Closing Price')
+
+plt.grid()
+plt.show()
