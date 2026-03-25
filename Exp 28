@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+
+languages = ['Python', 'Java', 'C++', 'JavaScript']
+popularity = [90, 80, 70, 85]
+
+plt.barh(languages, popularity, color='green')
+
+plt.xlabel('Popularity')
+plt.ylabel('Languages')
+plt.title('Horizontal Bar Chart')
+
+plt.show()
