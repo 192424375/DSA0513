@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+labels = ['A', 'B', 'C']
+men = [20, 35, 30]
+women = [25, 32, 34]
+
+men_std = [2, 3, 4]
+women_std = [3, 5, 2]
+
+x = np.arange(len(labels))
+
+plt.bar(x, men, yerr=men_std, label='Men')
+plt.bar(x, women, bottom=men, yerr=women_std, label='Women')
+
+plt.xticks(x, labels)
+plt.ylabel('Scores')
+plt.title('Stacked Bar Plot with Error Bars')
+
+plt.legend()
+plt.show()
