@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+
+x = []
+y = []
+
+# Read from file (each line: x,y)
+with open('data.txt', 'r') as file:
+    for line in file:
+        a, b = line.strip().split(',')
+        x.append(float(a))
+        y.append(float(b))
+
+plt.plot(x, y, marker='o')
+
+plt.xlabel('X values')
+plt.ylabel('Y values')
+plt.title('Plot from File')
+
+plt.show()
