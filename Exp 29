@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+
+languages = ['Python', 'Java', 'C++', 'JavaScript']
+popularity = [90, 80, 70, 85]
+
+colors = ['red', 'blue', 'green', 'purple']
+
+plt.bar(languages, popularity, color=colors)
+
+plt.title('Bar Chart with Different Colors')
+plt.xlabel('Languages')
+plt.ylabel('Popularity')
+
+plt.show()
